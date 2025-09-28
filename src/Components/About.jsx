@@ -1,29 +1,28 @@
-    export default function About() {
+export default function About() {
     return (
-        <section className="py-20 bg-gray-900 text-white">
-        <h2 className="text-4xl font-bold text-center mb-10">About Me</h2>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            {/* Character Card */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-2">Daniel Kasambala</h3>
-            <p className="mb-4">CS Graduate, Full-Stack Developer, AI & Game Dev Enthusiast, Loves Dance & Creativity</p>
-            <ul className="flex flex-wrap gap-2">
-                <li className="bg-purple-600 px-3 py-1 rounded">React</li>
-                <li className="bg-pink-600 px-3 py-1 rounded">FastAPI</li>
-                <li className="bg-yellow-600 px-3 py-1 rounded">Godot</li>
-                <li className="bg-green-600 px-3 py-1 rounded">ML/AI</li>
-            </ul>
+        <section className="bg-gray-900 py-16">
+        <h1 className="text-4xl text-white font-bold text-center mb-10">About Me</h1>
+
+        <div className="container mx-auto flex flex-col md:flex-row items-center  gap-5 px-6">
+            
+            {/* Text Section */}
+            <div className="flex-1 flex items-center">
+            <p className="text-white text-lg leading-relaxed">
+                I’m <span className="font-semibold text-green-600">Daniel Kasambala</span>, a Computer Science graduate (2021–2025) with hands-on experience in<span className="text-indigo-600"> full-stack development</span>,<span className=" text-cyan-600"> game creation (Godot)</span>, <span className="text-teal-600">AI/ML models</span>, and <span className="text-green-600">APIs</span>.  
+                <br /><br />
+                I’ve built solutions that bridge technology and creativity. Off the screen, I lead my university’s dance club—because innovation, like rhythm, comes alive in motion.
+            </p>
             </div>
-            {/* Timeline */}
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-4">Journey</h3>
-            <ul className="space-y-4">
-                <li>2020: Started CS Degree</li>
-                <li>2023: Full-Stack Projects & AI Experiments</li>
-                <li>2025: Portfolio & Creative Projects</li>
-            </ul>
+
+            {/* Image Section */}
+            <div className="flex-1 flex items-center justify-center">
+            <img
+                src="/images/profile.jpg"
+                alt="Daniel Kasambala"
+                className="w-full max-w-sm h-full object-cover rounded-lg shadow-lg border-8 border-l-green-600 border-t-indigo-600 border-r-cyan-600 border-b-teal-600"
+            />
             </div>
         </div>
         </section>
     );
-    }
+}

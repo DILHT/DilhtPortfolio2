@@ -1,33 +1,100 @@
-import { motion } from "framer-motion";
-import Cube3D from './Cube';
+
+    // eslint-disable-next-line no-unused-vars
+    import { motion } from "framer-motion";
+    import { Typewriter } from "react-simple-typewriter";
+    import { useState } from "react";
+    import Silk from "./Silk";
+    import { NavBar } from "./Navbar";
+import GradientText from "../util/textgradient";
+    // import  DarkVeil from "../util/DarkVeil";
 
     export default function Hero() {
+
+        const [cursorVisible, setCursorVisible] = useState(true);
+
+
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-700 to-pink-500 text-white">
-        <motion.h1
-            initial={{ opacity: 0, y: -50 }}
+        <section className="relative min-h-screen flex flex-col items-center justify-center text-center text-white overflow-hidden bg-gradient-to-bl from-[#000818] to-black">
+        
+        {/* Background Video with controls */}
+        
+        {/* <img
+            src="/images/tech.jpg"
+            alt="Background image"
+            className="absolute inset-0 w-full h-full object-cover opacity-30" 
+            /> */}
+            <div className="absolute inset-0 z-0">
+            <Silk
+            speed={5}
+            scale={1}
+            color="#7B7481"
+            noiseIntensity={1.5}
+            rotation={0}
+            
+            />
+            </div>
+            {/* <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <DarkVeil />
+            </div> */}
+
+        {/* Overlay gradient */}
+        {/* <div className="absolute inset-1 z-10 bg-gradient-to-t from-black/50 via-black/80 to-transparent">
+        <img src="/images/programmer.gif"  alt="coder" className="rounded-full w-70"/>
+        
+        </div> */}
+
+        <div className="w-full absolute z-10 top-6 m-0">
+        <NavBar/>
+        </div>
+        {/* Main Content */}
+        <div className="relative z-10 px-4">
+            <motion.h1
+            initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl font-bold mb-4"
-        >
-            Daniel Kasambala
-        </motion.h1>
-        <motion.p
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
+            >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-500 to-white">
+            <Typewriter
+                words={["Hi There","I am Daniel Kasambala"]}
+                loop={1}
+                cursor={!cursorVisible}
+                cursorStyle="_"
+                typeSpeed={100}
+                deleteSpeed={90}
+                delaySpeed={3000}
+                onLoopDone={() => setCursorVisible(true)}
+                />
+                {/* This span replaces the cursor after typing is done */}
+                {cursorVisible && <span style={{ display: "inline-block", width: "1ch" }} />}
+            </span>
+            
+            </motion.h1>
+
+            <motion.p
+            initial={{ opacity: 0 ,y:0}}
+            animate={{ opacity: 1, y:0 }}
+            transition={{ delay: 1, duration: 3}}
+            className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto"
+            >
+            Full-Stack Developer 💻 | AI Enthusiast 🤖 | Game Dev Explorer 🎮 
+            
+            </motion.p>
+
+            {/* Buttons */}
+            <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl mb-8"
-        >
-            Full-Stack Developer | AI Enthusiast | Game Dev Explorer | Creativity in Motion
-        </motion.p>
-        <Cube3D />
-        <div className="mt-8 flex gap-4">
-            <button className="bg-white text-purple-700 px-6 py-2 rounded hover:bg-purple-200 transition">
-            View Projects
+            transition={{ delay: 1.2 }}
+            className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
+            >
+            <button className="bg-transparent border border-white text-white px-6 py-3 sm:py-2 rounded-2xl shadow-lg hover:bg-white hover:text-purple-700 transition font-medium">
+                View Projects
             </button>
-            <button className="bg-transparent border border-white px-6 py-2 rounded hover:bg-white hover:text-purple-700 transition">
-            Contact Me
+            <button className="bg-transparent border border-white px-6 py-3 sm:py-2 rounded-2xl hover:bg-white hover:text-purple-700 transition font-medium">
+                Contact Me
             </button>
+            </motion.div>
         </div>
         </section>
     );
