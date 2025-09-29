@@ -14,7 +14,7 @@ export const NavBar = () => {
             {links.map(link =>{
             return (
             
-            <a href="#" key={link.name} className="text-blue text-xl">{link.name}</a>
+            <a href="#" key={link.name} className="text-white text-xl hover:text-blue-500">{link.name}</a>
         
         )
             })}
