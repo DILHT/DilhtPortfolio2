@@ -11,7 +11,7 @@
     ];
 
     return (
-        <section className="bg-black bg-cover  py-2 text-gray-900">
+        <section className="bg-slate-800 bg-cover  py-2 text-gray-900">
         <h2 className="text-4xl font-bold text-center mb-10 text-white">Projects</h2>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 ">
             {projects.map((proj) => (
@@ -34,7 +34,7 @@
                 )}</p>
                 </div>
             </div>
-             
+            
             ))}
         </div>
         </section>

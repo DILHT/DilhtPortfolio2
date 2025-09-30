@@ -5,7 +5,7 @@
     import { useState } from "react";
     import Silk from "./Silk";
     import { NavBar } from "./Navbar";
-import GradientText from "../util/textgradient";
+// import GradientText from "../util/textgradient";
     // import  DarkVeil from "../util/DarkVeil";
 
     export default function Hero() {
@@ -14,7 +14,7 @@ import GradientText from "../util/textgradient";
 
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center text-center text-white overflow-hidden bg-gradient-to-bl from-[#000818] to-black">
+        <section className="relative min-h-screen flex flex-col items-center justify-center text-center text-white bg-gradient-to-bl from-[#000818] to-black overflow-x-hidden">
         
         {/* Background Video with controls */}
         
@@ -43,7 +43,7 @@ import GradientText from "../util/textgradient";
         
         </div> */}
 
-        <div className="w-full absolute z-10 top-6 m-0">
+        <div className="w-full absolute z-10 top-0">
         <NavBar/>
         </div>
         {/* Main Content */}
@@ -52,7 +52,7 @@ import GradientText from "../util/textgradient";
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
+            className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight"
             >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-500 to-white">
             <Typewriter
@@ -75,7 +75,7 @@ import GradientText from "../util/textgradient";
             initial={{ opacity: 0 ,y:0}}
             animate={{ opacity: 1, y:0 }}
             transition={{ delay: 1, duration: 3}}
-            className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto"
+            className="text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto px-2"
             >
             Full-Stack Developer 💻 | AI Enthusiast 🤖 | Game Dev Explorer 🎮 
             
@@ -86,12 +86,12 @@ import GradientText from "../util/textgradient";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
+            className="mt-8 flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto px-4"
             >
-            <button className="bg-transparent border border-white text-white px-6 py-3 sm:py-2 rounded-2xl shadow-lg hover:bg-white hover:text-purple-700 transition font-medium">
+            <button className="w-full sm:w-auto bg-transparent border border-white text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-white hover:text-purple-700 transition font-medium">
                 View Projects
             </button>
-            <button className="bg-transparent border border-white px-6 py-3 sm:py-2 rounded-2xl hover:bg-white hover:text-purple-700 transition font-medium">
+            <button className="w-full sm:w-auto bg-transparent border border-white px-6 py-3 rounded-2xl hover:bg-white hover:text-purple-700 transition font-medium">
                 Contact Me
             </button>
             </motion.div>
