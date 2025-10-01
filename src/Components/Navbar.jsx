@@ -20,12 +20,12 @@ export const NavBar = () => {
         <nav className="w-full fixed top-0 left-0 z-20 bg-black/30 backdrop-blur-md">
 
         
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <div className="max-w-7xl  flex justify-between items-center px-6 py-4">
                 {/* Logo */}
-                <h1 className="text-white text-2xl font-bold">DK</h1>
+                <h1 className="text-white text-2xl font-bold ">DK</h1>
 
                 {/* Desktop Menu */}
-                <div className="hidden sm:flex space-x-6">
+                <div className="hidden sm:flex space-x-2 mx-0">
                     {links.map((link) => (
                         <a
                             key={link.name}
@@ -54,7 +54,7 @@ export const NavBar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="sm:hidden flex flex-col items-center space-y-4 pb-6"
+                        className="sm:hidden flex flex-col items-center w-full space-y-4 pb-6"
                     >
                         {links.map((link) => (
                             <a
