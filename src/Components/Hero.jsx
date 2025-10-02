@@ -4,7 +4,7 @@
     import { Typewriter } from "react-simple-typewriter";
     import { useState } from "react";
     import Silk from "./Silk";
-    import { NavBar } from "./Navbar";
+    // import { NavBar } from "./Navbar";
 // import GradientText from "../util/textgradient";
     // import  DarkVeil from "../util/DarkVeil";
 
@@ -43,9 +43,9 @@
         
         </div> */}
 
-        <div className="w-full absolute z-10 top-0">
+        {/* <div className="w-full absolute z-10 top-0">
         <NavBar/>
-        </div>
+        </div> */}
         {/* Main Content */}
         <div className="relative z-10 px-4">
             <motion.h1
